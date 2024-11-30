@@ -1,0 +1,211 @@
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #cf0f0f;
+    --primary-color-contrast: #ffffff;
+    --field-background-color: #000;
+}
+
+.light-theme {
+--page-background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 65%,
+    rgba(255, 255, 255, 0.75) 100%
+);
+--header-background-color: #e3e3e3;
+--highlight-color: #000000;
+--featured-font-family: "Archivo", sans-serif;
+--character-top-image-src: url("../images/characters/kids-on-the-bike.svg");
+--character-top-image-color: #ffffff;
+--character-bottom-image-src: url("../images/characters/inverted-world-monster.svg");
+--character-bottom-image-color: #e5e5e5;
+--background-lamp-image: url("../images/backgrounds/lamps.png");
+--footer-background-color: #b5bbbf;
+}
+  
+.dark-theme {
+    --page-background: linear-gradient(
+    180deg,
+    #050000 0%,
+    #130404 65%,
+    rgba(19, 1, 1, 0.75) 100%
+    );
+    --header-background-color: #220f0f;
+    --highlight-color: #ffffff;
+    --featured-font-family: "Rubik Glitch", sans-serif;
+    --character-bottom-image-src: url("../images/characters/kids-on-the-bike.svg");
+    --character-bottom-image-color: rgba(255, 255, 255, 0.1);
+    --character-top-image-src: url("../images/characters/inverted-world-monster.svg");
+    --character-top-image-color: #000;
+    --background-lamp-image: url("../images/backgrounds/lamps-inverted.png");
+    --footer-background-color: #000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../images/banner/florest.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    height: 970px;
+}
+.header-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b5bbbfa2; 
+    z-index: 1; 
+}
+
+.header-content img, p, button{
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+.header-content p{
+    width: 590px;
+    text-align: center;
+}
+.header-content button{
+    padding: 10px 20px;
+    border:3px solid #CF0F0F;
+    color: #CF0F0F;
+    font-weight:bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#top-characters {
+    background-image: url("../images/characters/kids-on-the-bike.svg"); 
+    background-size: cover; 
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    width: 888px;
+    height: 300px;
+    left: 20%;
+    margin-top: -300px;
+    z-index: 1;
+}
+
+#bottom-characters {
+    position: absolute;
+    width: 888px;
+    height: 440px;
+    left: 20%;
+    background-image: url("../images/characters/inverted-world-monster.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+    transform: rotateX(180deg);
+    filter: brightness(90%);
+}
+.section-texts h1{
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #CF0F0F;
+    margin-right: 1100px;
+}
+.section-texts p{
+    margin-right: 860px; 
+}
+.section-texts {
+    top: 430px;
+    margin-left: 100px;
+}
+#section-inverted-world img{
+    display: block;
+    margin-left: auto;
+    margin-right: 40px;
+    top: 120px;
+}
+.video-frame{
+    top: 220px;
+    width: 560px; 
+    height: 315px;
+    margin-left: 120px;
+    box-shadow: -20px 20px 0 #CF0F0F;
+    background-color: #CF0F0F;
+}
+.video-frame::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #cf0f0f42; 
+    z-index: 1; 
+}
+.section-texts2{
+    top: -100px;
+    text-align: end;
+    margin-right: 100px;
+}
+.section-texts2 h2{
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #CF0F0F;
+    margin-left: 1000px;
+}
+.section-texts2 p{
+    margin-left: 920px;
+}
+#section-stranger-things-gallery h2{
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #CF0F0F;
+    top: 100px;
+    margin-left: 100px;
+    margin-right: 700px;
+}
+.gallery-container img{
+    top: 150px;
+    width: 233px;
+    height: 232px;
+    border: 5px solid #000000;
+    box-shadow: 0 0 0 1px red,
+                0 0 0 10px black;
+}
+.gallery-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin-right: 400px;
+    margin-left: 52px;
+    margin-bottom: 300px;
+}
+#section-stranger-things-gallery::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/backgrounds/lamps-inverted.png");
+    background-size: 1000px 1000px;
+    background-repeat: no-repeat;
+    background-position: 850px -130px;
+    height: 700px;
+    filter: invert();
+    z-index: -1;
+}
+
